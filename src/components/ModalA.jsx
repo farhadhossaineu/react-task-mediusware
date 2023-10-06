@@ -54,13 +54,13 @@ const ModalA = () => {
           </tr>
         </thead>
         <tbody>
-          {allContacts.length > 0 &&
+          {allContacts.length ?
             allContacts.map((data) => (
               <tr key={data.id}>
                 <td scope="col">{data.phone}</td>
                 <td scope="col">{data.country.name}</td>
               </tr>
-            ))}
+            )): "Loading..." }
         </tbody>
       </table>
       <div
